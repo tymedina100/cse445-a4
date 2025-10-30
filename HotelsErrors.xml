@@ -1,1 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Hotel> <!-- should be <Hotels> -->
+  <Hotel Rating="4.2">
+    <Name>Westin</Name>
+    <!-- Missing a Phone on purpose -->
+    <Address NearestAirport="Sky Harbor">
+      <Number>11</Number>
+      <Street>E 7th St</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+    <!-- </Address> is intentionally left unclosed -->
+  </Hotel>
+  <Hotel>
+    <Name>Duplicate Name 1</Name>
+    <Name>Duplicate Name 2</Name>
+    <Phone>480-555-1234</Phone>
+    <Address>
+      <Number>1</Number>
+      <Street>S Mill Ave</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+</Hotel>
 
