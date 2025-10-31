@@ -1,27 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Hotel> <!-- should be <Hotels> -->
+<Hotel> <!-- ERROR #1: wrong root element; should be <Hotels> -->
+  <!-- ERROR #2: missing required <Phone> -->
   <Hotel Rating="4.2">
-    <Name>Westin</Name>
-    <!-- Missing a Phone on purpose -->
+    <Name>Westin Tempe</Name>
     <Address NearestAirport="Sky Harbor">
       <Number>11</Number>
       <Street>E 7th St</Street>
       <City>Tempe</City>
       <State>AZ</State>
       <Zip>85281</Zip>
-    <!-- </Address> is intentionally left unclosed -->
+    </Address>
   </Hotel>
+
+  <!-- ERROR #3: duplicate <Name> -->
   <Hotel>
-    <Name>Duplicate Name 1</Name>
-    <Name>Duplicate Name 2</Name>
-    <Phone>480-555-1234</Phone>
+    <Name>Graduate Tempe</Name>
+    <Name>Duplicate Name</Name>
+    <Phone>480-967-9431</Phone>
     <Address>
-      <Number>1</Number>
-      <Street>S Mill Ave</Street>
+      <Number>225</Number>
+      <Street>E Apache Blvd</Street>
       <City>Tempe</City>
       <State>AZ</State>
       <Zip>85281</Zip>
     </Address>
   </Hotel>
-</Hotel>
 
+  <!-- ERROR #4: unclosed </Address> -->
+  <Hotel Rating="4.1">
+    <Name>AC Hotel Phoenix Tempe/Downtown</Name>
+    <Phone>480-642-6140</Phone>
+    <Address NearestAirport="Sky Harbor">
+      <Number>100</Number>
+      <Street>E Rio Salado Pkwy</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+    <!-- </Address> intentionally missing -->
+  </Hotel>
+
+  <!-- ERROR #5: missing required child (<Zip>) -->
+  <Hotel>
+    <Name>Courtyard by Marriott Tempe Downtown</Name>
+    <Phone>480-966-2800</Phone>
+    <Address>
+      <Number>601</Number>
+      <Street>S Ash Ave</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <!-- Zip missing on purpose -->
+    </Address>
+  </Hotel>
+</Hotel>
